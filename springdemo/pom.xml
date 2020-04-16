@@ -11,7 +11,7 @@
     <properties>
         <java.version>1.8</java.version>
         <springboot.starter.version>2.0.0.RELEASE</springboot.starter.version>
-        <spring.version>5.0.4.RELEASE</spring.version>
+        <spring.version>5.2.5.RELEASE</spring.version>
     </properties>
 
     <parent>
