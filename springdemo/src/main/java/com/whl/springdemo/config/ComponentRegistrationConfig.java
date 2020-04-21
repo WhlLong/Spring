@@ -1,4 +1,4 @@
-package com.whl.springdemo;
+package com.whl.springdemo.config;
 
 import com.whl.springdemo.component.BeanComponent;
 import com.whl.springdemo.component.BeanLifeComponent;
@@ -7,12 +7,10 @@ import com.whl.springdemo.component.LazyComponent;
 import com.whl.springdemo.condition.WhlCondition;
 import org.springframework.context.annotation.*;
 
-import javax.annotation.PreDestroy;
-
 @Configuration
 @Conditional({WhlCondition.class})
 @Import({ImportComponent.class, MyImportSelector.class, MyImportBeanDefinitionRegistrar.class})
-public class ComponentRegistration {
+public class ComponentRegistrationConfig {
 
     @Bean
     public BeanComponent beanComponent() {

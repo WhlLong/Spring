@@ -4,12 +4,14 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 
-public class BeanLifeComponent implements InitializingBean, DisposableBean, BeanPostProcessor {
+public class BeanLifeComponent implements InitializingBean, DisposableBean, BeanPostProcessor, ApplicationContextAware {
 
 
     public void sout() {
@@ -54,13 +56,19 @@ public class BeanLifeComponent implements InitializingBean, DisposableBean, Bean
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         System.out.println("BeanLifeComponent.postProcessBeforeInitialization....");
-        return null;
+        return bean;
     }
 
     //5
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         System.out.println("BeanLifeComponent.postProcessAfterInitialization....");
-        return null;
+        return bean;
+    }
+
+    //0
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        System.out.println("BeanLifeComponent.setApplicationContext....");
     }
 }

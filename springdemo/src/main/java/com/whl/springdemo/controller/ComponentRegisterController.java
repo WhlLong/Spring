@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/hello")
-public class HelloWorldController {
+public class ComponentRegisterController {
 
     @Autowired
     private BeanComponent beanComponent;

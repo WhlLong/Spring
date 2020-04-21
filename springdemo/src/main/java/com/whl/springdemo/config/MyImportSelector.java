@@ -1,4 +1,4 @@
-package com.whl.springdemo;
+package com.whl.springdemo.config;
 
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;

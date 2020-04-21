@@ -1,4 +1,4 @@
-package com.whl.springdemo;
+package com.whl.springdemo.config;
 
 import com.whl.springdemo.component.ImportBeanDefinitionRegistrarComponent;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
