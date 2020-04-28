@@ -23,7 +23,7 @@ public class BeanLifeComponent implements InitializingBean, DisposableBean, Bean
         System.out.println("BeanLifeComponent.initMethod....");
     }
 
-    //7
+    //8
     public void destoryMethod() {
         System.out.println("BeanLifeComponent.destoryMethod....");
     }
@@ -34,13 +34,13 @@ public class BeanLifeComponent implements InitializingBean, DisposableBean, Bean
         System.out.println("BeanLifeComponent.afterPropertiesSet....");
     }
 
-    //6
+    //7
     @Override
     public void destroy() throws Exception {
         System.out.println("BeanLifeComponent.destroy....");
     }
 
-    //5
+    //6
     @PreDestroy
     public void preDestroy() {
         System.out.println("BeanLifeComponent.PreDestroy....");
